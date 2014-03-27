@@ -1,14 +1,4 @@
-# Example of MicroArray Analysis taken from 
-# adapted from
-#		analysing-microarray-data-in-bioconductor
-# on
-#		http://bioinformatics.knowledgeblog.org
-#
-# download the BioC installation routines
-#source("http://bioconductor.org/biocLite.R")
-#biocLite()
-#biocLite("GEOquery")
-#biocLite("hgu133plus2.db")
+#load the R packages required for script to function
 library(ggplot2)
 library(reshape2)
 library(GEOquery)
@@ -48,8 +38,10 @@ library(limma)
   rownames(stats) <- NULL
   return(stats)
 }
+#set the working directory
+workingDir = "~/BS32010/report/Project"
 
-workingDir = "~/BS32010/assignments/Report_data/GCOS_Cel"
+#filenames changed from example code to the input files we were told to analyse
 .getData <- function()
 {
 	filenames <- c("ROS1-_9.CEL", "ROS1+_10.CEL", "ROS2-_11.CEL",
@@ -180,6 +172,7 @@ workingDir = "~/BS32010/assignments/Report_data/GCOS_Cel"
 	return(results)
 }
 
+#If conditions met plots results as 4 seperate pdfs
 if(!exists("celResults"))
 {
 	celRAW <- .getData()
