@@ -8,6 +8,6 @@ annotResults.txt is an output file created as a result of running the DESeq2 ana
 
 example.R contains the code used to run the limma analysis in RStudio
 
-phylo_R_studio_report_code.R contains the code used to create a tree from an correctly aligned .fasta file in RStudio
+phylo_R_studio_report_code.R contains the code used to create a tree from an correctly aligned .fasta file in RStudio. The trees were constructed outside of Linux and the images could not be uploaded to Github.
 
 RNASeq.R contains the code used to run the DESeq2 analysis in RStudio.
